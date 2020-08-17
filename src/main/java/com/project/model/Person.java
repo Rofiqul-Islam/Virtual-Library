@@ -12,7 +12,7 @@ import javax.persistence.Table;
 public class Person {
     @Id
     @Column(name = "id")
-    private Long id;
+    private Integer id;
 
     @Column(name = "name")
     private String name;
@@ -24,15 +24,15 @@ public class Person {
     private String email;
 
     @Column(name = "role")
-    private String role;
+    private Integer role;
 
     @Column(name = "verified")
-    private String verified;
+    private Integer verified;
 
     public Person() {
     }
 
-    public Person(Long id, String name, String password, String email, String role, String verified) {
+    public Person(Integer id, String name, String password, String email, Integer role, Integer verified) {
         this.id = id;
         this.name = name;
         this.password = password;
@@ -41,11 +41,11 @@ public class Person {
         this.verified = verified;
     }
 
-    public Long getId() {
+    public Integer getId() {
         return id;
     }
 
-    public void setId(Long id) {
+    public void setId(Integer id) {
         this.id = id;
     }
 
@@ -73,19 +73,19 @@ public class Person {
         this.email = email;
     }
 
-    public String getRole() {
+    public Integer getRole() {
         return role;
     }
 
-    public void setRole(String role) {
+    public void setRole(Integer role) {
         this.role = role;
     }
 
-    public String getVerified() {
+    public Integer getVerified() {
         return verified;
     }
 
-    public void setVerified(String verified) {
+    public void setVerified(Integer verified) {
         this.verified = verified;
     }
 }

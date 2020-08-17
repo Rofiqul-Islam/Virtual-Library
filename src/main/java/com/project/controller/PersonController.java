@@ -21,6 +21,7 @@ public class PersonController {
 
     @RequestMapping("/all")
     public Iterable<Person> findAll(){
+        System.out.println("reached here");
         return personRepository.findAll();
     }
 

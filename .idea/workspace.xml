@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="0a7ce3d1-0656-4593-8da1-7c49cae371c2" name="Default Changelist" comment="" />
+    <list default="true" id="0a7ce3d1-0656-4593-8da1-7c49cae371c2" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/controller/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/model/Person.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -15,6 +21,9 @@
       </list>
     </option>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="MavenImportPreferences">
     <option name="importingSettings">
       <MavenImportingSettings>
@@ -23,6 +32,7 @@
     </option>
   </component>
   <component name="ProjectId" id="1e1Z8VqrKC1VU5nvXmD1xgg3rYi" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -78,26 +88,26 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="883" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1593544281036" />
-    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1593546494798">
+    <state x="549" y="170" key="FileChooserDialogImpl" timestamp="1597602856907">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1593546494798" />
-    <state width="1493" height="232" key="GridCell.Tab.0.bottom" timestamp="1593572387623">
+    <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597602856907" />
+    <state width="1493" height="342" key="GridCell.Tab.0.bottom" timestamp="1597627057194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1593572387623" />
-    <state width="1493" height="232" key="GridCell.Tab.0.center" timestamp="1593572387622">
+    <state width="1493" height="342" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597627057194" />
+    <state width="1493" height="342" key="GridCell.Tab.0.center" timestamp="1597627057194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1593572387622" />
-    <state width="1493" height="232" key="GridCell.Tab.0.left" timestamp="1593572387622">
+    <state width="1493" height="342" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597627057194" />
+    <state width="1493" height="342" key="GridCell.Tab.0.left" timestamp="1597627057194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1593572387622" />
-    <state width="1493" height="232" key="GridCell.Tab.0.right" timestamp="1593572387623">
+    <state width="1493" height="342" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597627057194" />
+    <state width="1493" height="342" key="GridCell.Tab.0.right" timestamp="1597627057194">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="232" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1593572387623" />
+    <state width="1493" height="342" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597627057194" />
     <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1593545315604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -106,9 +116,13 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1593533848030" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1593531523004">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1597610519786">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1593531523004" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1597610519786" />
+    <state x="209" y="120" key="new project wizard" timestamp="1597602917243">
+      <screen x="0" y="0" width="1536" height="824" />
+    </state>
+    <state x="209" y="120" key="new project wizard/0.0.1536.824@0.0.1536.824" timestamp="1597602917243" />
   </component>
 </project>
