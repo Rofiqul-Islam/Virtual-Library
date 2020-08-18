@@ -4,6 +4,7 @@
     <list default="true" id="0a7ce3d1-0656-4593-8da1-7c49cae371c2" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+<<<<<<< HEAD
       <change beforePath="$PROJECT_DIR$/Virtual_Library.iml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/controller/PersonController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/project/model/Person.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/model/Person.java" afterDir="false" />
@@ -12,6 +13,11 @@
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/controller/PersonController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/controller/PersonController.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/model/Person.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/model/Person.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/com/project/repository/PersonRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/project/repository/PersonRepository.class" afterDir="false" />
+=======
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/controller/PersonController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/controller/PersonController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/model/AuthenticationCredentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/model/AuthenticationCredentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/project/repository/AuthenticationCredentialsRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/project/repository/AuthenticationCredentialsRepository.java" afterDir="false" />
+>>>>>>> 2be509882c3682caa072412727b6905e1962bd99
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -320,10 +326,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="574" y="105" key="#com.intellij.ide.util.MemberChooser" timestamp="1593501968386">
+    <state x="574" y="105" key="#com.intellij.ide.util.MemberChooser" timestamp="1597738068701">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="574" y="105" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1593501968386" />
+    <state x="574" y="105" key="#com.intellij.ide.util.MemberChooser/0.0.1536.824@0.0.1536.824" timestamp="1597738068701" />
     <state x="883" y="165" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1593544281036">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -332,22 +338,22 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="549" y="170" key="FileChooserDialogImpl/0.0.1536.824@0.0.1536.824" timestamp="1597602856907" />
-    <state width="1493" height="342" key="GridCell.Tab.0.bottom" timestamp="1597627057194">
+    <state width="1493" height="341" key="GridCell.Tab.0.bottom" timestamp="1597770021041">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597627057194" />
-    <state width="1493" height="342" key="GridCell.Tab.0.center" timestamp="1597627057194">
+    <state width="1493" height="341" key="GridCell.Tab.0.bottom/0.0.1536.824@0.0.1536.824" timestamp="1597770021041" />
+    <state width="1493" height="341" key="GridCell.Tab.0.center" timestamp="1597770021041">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597627057194" />
-    <state width="1493" height="342" key="GridCell.Tab.0.left" timestamp="1597627057194">
+    <state width="1493" height="341" key="GridCell.Tab.0.center/0.0.1536.824@0.0.1536.824" timestamp="1597770021041" />
+    <state width="1493" height="341" key="GridCell.Tab.0.left" timestamp="1597770021041">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597627057194" />
-    <state width="1493" height="342" key="GridCell.Tab.0.right" timestamp="1597627057194">
+    <state width="1493" height="341" key="GridCell.Tab.0.left/0.0.1536.824@0.0.1536.824" timestamp="1597770021041" />
+    <state width="1493" height="341" key="GridCell.Tab.0.right" timestamp="1597770021041">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state width="1493" height="342" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597627057194" />
+    <state width="1493" height="341" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1597770021041" />
     <state x="299" y="70" key="Maven.ArtifactSearchDialog" timestamp="1593545315604">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -356,10 +362,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="249" y="0" key="SettingsEditor/0.0.1536.824@0.0.1536.824" timestamp="1593533848030" />
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1597610519786">
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog" timestamp="1597766903243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1597610519786" />
+    <state x="477" y="240" key="com.intellij.ide.util.TipDialog/0.0.1536.824@0.0.1536.824" timestamp="1597766903243" />
     <state x="209" y="120" key="new project wizard" timestamp="1597602917243">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
