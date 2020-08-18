@@ -42,11 +42,17 @@ public class PersonController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Integer authenticationViaEmail(@RequestBody LoginCredential loginCredential) {
         try{
+
             int id = personRepository.findWithLoginCredential(loginCredential.getEmail(),loginCredential.getPassword());
             Random rand = new Random();
             String authCode = String.format("%04d", rand.nextInt(10000));
+            Long temp = authenticationCredentialsRepository.findByPersonId(id);
+            if(temp == null) {
+                authenticationCredentialsRepository.save(new AuthenticationCredentials(0, id, authCode));
+            }else{
+                authenticationCredentialsRepository.updatePersonAuthCode(authCode, id);
+            }
             sendMail(loginCredential.getEmail(), authCode);
-            authenticationCredentialsRepository.save(new AuthenticationCredentials(0, id,authCode));
             return id;
         } catch (Exception e) {
             e.printStackTrace();
