@@ -11,7 +11,7 @@ public interface PersonRepository extends CrudRepository<Person,Long> {
     Person findByEmailAndPassword(String email, String password);
 
     @Query(
-            value = "SELECT p.id FROM person p WHERE p.email = ?1 AND p.password = ?2",
+            value = "SELECT * FROM person p WHERE p.email = ?1 AND p.password = ?2",
             nativeQuery = true)
-    Integer findWithLoginCredential(String email, String password);
+    Person findWithLoginCredential(String email, String password);
 }

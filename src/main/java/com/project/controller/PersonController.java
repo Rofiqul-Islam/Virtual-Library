@@ -13,18 +13,9 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
-import javax.swing.text.html.Option;
-import org.springframework.web.bind.annotation.*;
 
-import javax.mail.*;
-import javax.mail.internet.AddressException;
-import javax.mail.internet.InternetAddress;
-import javax.mail.internet.MimeMessage;
-import java.lang.reflect.Member;
-import java.util.Properties;
 import java.util.Random;
-import java.util.logging.Level;
-import java.util.logging.Logger;
+
 
 
 @RestController
@@ -110,24 +101,24 @@ public class PersonController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public Integer authenticationViaEmail(@RequestBody LoginCredential loginCredential) {
+    public Long authenticationViaEmail(@RequestBody LoginCredential loginCredential) {
         try{
 
-            int id = personRepository.findWithLoginCredential(loginCredential.getEmail(),loginCredential.getPassword());
+            Person person = personRepository.findWithLoginCredential(loginCredential.getEmail(),loginCredential.getPassword());
             Random rand = new Random();
             String authCode = String.format("%04d", rand.nextInt(10000));
-            Long temp = authenticationCredentialsRepository.findByPersonId(id);
+            Long temp = authenticationCredentialsRepository.findByPersonId(person.getId());
             if(temp == null) {
-                authenticationCredentialsRepository.save(new AuthenticationCredentials(0, id, authCode));
+                authenticationCredentialsRepository.save(new AuthenticationCredentials(0L, person, authCode));
             }else{
-                authenticationCredentialsRepository.updatePersonAuthCode(authCode, id);
+                authenticationCredentialsRepository.updatePersonAuthCode(authCode, person.getId());
             }
             Util.sendMail(loginCredential.getEmail(), authCode);
-            return id;
+            return person.getId();
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return 0;
+        return 0L;
     }
 
 }

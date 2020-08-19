@@ -6,11 +6,13 @@ import javax.persistence.*;
 @Table(name = "auth_code")
 public class AuthenticationCredentials {
         @Id
+        @GeneratedValue( strategy= GenerationType.AUTO )
         @Column(name = "id")
-        private Integer id;
+        private Long id;
 
-        @Column(name = "person_id")
-        private Integer person_id;
+        @OneToOne
+        @JoinColumn(name = "person_id")
+        private Person person;
 
         @Column(name = "latest_code")
         private String latest_code;
@@ -18,26 +20,26 @@ public class AuthenticationCredentials {
     public AuthenticationCredentials() {
     }
 
-    public AuthenticationCredentials(Integer id, Integer person_id, String latest_code) {
+    public AuthenticationCredentials(Long id, Person person, String latest_code) {
         this.id = id;
-        this.person_id = person_id;
+        this.person = person;
         this.latest_code = latest_code;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public Integer getPerson_id() {
-        return person_id;
+    public Person getPerson() {
+        return person;
     }
 
-    public void setPerson_id(Integer person_id) {
-        this.person_id = person_id;
+    public void setPerson(Person person) {
+        this.person = person;
     }
 
     public String getLatest_code() {

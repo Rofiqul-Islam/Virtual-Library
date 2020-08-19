@@ -2,15 +2,13 @@ package com.project.model;
 
 import org.springframework.stereotype.Component;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Entity
 @Table(name = "person")
 public class Person {
     @Id
+    @GeneratedValue( strategy= GenerationType.AUTO )
     @Column(name = "id")
     private Long id;
 
