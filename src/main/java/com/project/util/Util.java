@@ -1,11 +1,20 @@
 package com.project.util;
 
+import com.project.model.AuthenticationCredentials;
+import com.project.model.Person;
+import com.project.repository.AuthenticationCredentialsRepository;
+import com.project.repository.PersonRepository;
+import org.springframework.beans.factory.annotation.Autowired;
+
 import javax.mail.*;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 import java.util.Properties;
+import java.util.Random;
 
 public class Util {
+
+
 
     public static void sendMail(String recepient, String authenticationCode) throws MessagingException {
         Properties properties = new Properties();
@@ -43,6 +52,12 @@ public class Util {
             e.printStackTrace();
         }
         return null;
+    }
+
+    public static String createAuthCode(){
+        Random rand = new Random();
+        String authCode = String.format("%04d", rand.nextInt(10000));
+        return authCode;
     }
 
 }

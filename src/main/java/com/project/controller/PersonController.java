@@ -33,9 +33,13 @@ public class PersonController {
     }
 
     @RequestMapping("/all")
-    public Iterable<Person> findAll(){
-        System.out.println("reached here");
+    public Iterable<Person> findAllPerson(){
         return personRepository.findAll();
+
+    }
+    @RequestMapping("/authCode")
+    public Iterable<AuthenticationCredentials> findAllAuthCode(){
+        return authenticationCredentialsRepository.findAll();
 
     }
 
@@ -103,18 +107,19 @@ public class PersonController {
     @RequestMapping(value = "/login", method = RequestMethod.POST)
     public Long authenticationViaEmail(@RequestBody LoginCredential loginCredential) {
         try{
-
             Person person = personRepository.findWithLoginCredential(loginCredential.getEmail(),loginCredential.getPassword());
-            Random rand = new Random();
-            String authCode = String.format("%04d", rand.nextInt(10000));
-            Long temp = authenticationCredentialsRepository.findByPersonId(person.getId());
-            if(temp == null) {
-                authenticationCredentialsRepository.save(new AuthenticationCredentials(0L, person, authCode));
-            }else{
-                authenticationCredentialsRepository.updatePersonAuthCode(authCode, person.getId());
+
+            if(person != null) {
+                String authCode = Util.createAuthCode();
+                Long temp = authenticationCredentialsRepository.findByPersonId(person.getId());
+                if(temp == null) {
+                    authenticationCredentialsRepository.save(new AuthenticationCredentials(0L, person, authCode));
+                }else{
+                    authenticationCredentialsRepository.updatePersonAuthCode(authCode, person.getId());
+                }
+                Util.sendMail(loginCredential.getEmail(), authCode);
+                return person.getId();
             }
-            Util.sendMail(loginCredential.getEmail(), authCode);
-            return person.getId();
         } catch (Exception e) {
             e.printStackTrace();
         }
