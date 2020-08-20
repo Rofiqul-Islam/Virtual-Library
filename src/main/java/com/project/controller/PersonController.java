@@ -45,7 +45,7 @@ public class PersonController {
 
     @PostMapping("/user/register")
     public ResponseEntity<Person> createUser(@RequestBody Person person){
-        System.out.println(person.getName());
+        System.out.println(person.getFirstName()+" "+person.getLastName());
         try {
 //            Person p = new Person();//
 //            p.setEmail(person.getEmail());
@@ -54,7 +54,7 @@ public class PersonController {
 //            p.setRole(person.getRole());
 //            p.setVerified(person.getVerified());
 //            personRepository.save(p);
-            Person p = personRepository.save(new Person((long)0,person.getName(),person.getPassword(),person.getEmail(),person.getRole(),person.getVerified()));
+            Person p = personRepository.save(new Person((long)0,person.getFirstName(),person.getLastName(),person.getPassword(),person.getEmail(),person.getRole(),person.getVerified()));
            return new ResponseEntity<>(p, HttpStatus.CREATED);
 
 
@@ -83,7 +83,8 @@ public class PersonController {
         if ( personData.isPresent()){
             Person p = personData.get();
             p.setEmail(person.getEmail());
-            p.setName(person.getName());
+            p.setFirstName(person.getFirstName());
+            p.setLastName(person.getLastName());
             p.setPassword(person.getPassword());
             p.setVerified(person.getVerified());
             p.setRole(person.getRole());
