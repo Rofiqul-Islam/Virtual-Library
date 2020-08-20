@@ -46,7 +46,9 @@ public class PersonController {
     @PostMapping("/user/register")
     public ResponseEntity<Person> createUser(@RequestBody Person person){
         System.out.println(person.getFirstName()+" "+person.getLastName());
-        try {
+        Person alreadyRegistered = personRepository.findWithEmail(person.getEmail());
+        if(alreadyRegistered == null) {
+            try {
 //            Person p = new Person();//
 //            p.setEmail(person.getEmail());
 //            p.setName(person.getName());
@@ -54,12 +56,15 @@ public class PersonController {
 //            p.setRole(person.getRole());
 //            p.setVerified(person.getVerified());
 //            personRepository.save(p);
-            Person p = personRepository.save(new Person((long)0,person.getFirstName(),person.getLastName(),person.getPassword(),person.getEmail(),person.getRole(),person.getVerified()));
-           return new ResponseEntity<>(p, HttpStatus.CREATED);
+                Person p = personRepository.save(new Person((long) 0, person.getFirstName(), person.getLastName(), person.getPassword(), person.getEmail(), person.getRole(), person.getVerified()));
+                return new ResponseEntity<>(p, HttpStatus.CREATED);
 
 
-        } catch (Exception e){
-            return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            } catch (Exception e) {
+                return new ResponseEntity<>(null, HttpStatus.INTERNAL_SERVER_ERROR);
+            }
+        }else{
+            return new ResponseEntity<>(alreadyRegistered,HttpStatus.ALREADY_REPORTED);
         }
     }
 
